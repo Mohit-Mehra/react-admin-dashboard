@@ -6,10 +6,11 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    .tiitle {
+    .titile {
       font-size: 12px;
-      font-weight: 200;
+      font-weight: 300;
       color: $soft-color;
+      text-transform: uppercase;
     }
 
     .listItem{
