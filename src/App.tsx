@@ -1,12 +1,14 @@
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import User from "./pages/users/Users";
 import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.scss"
+import Users from "./pages/users/Users";
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
 
 function App() {
   const Layout = () => {
@@ -41,7 +43,15 @@ function App() {
         },
         {
           path: "/users",
+      element: <Users />,
+        },
+        {
+          path: "/users/:id",
       element: <User />,
+        },
+        {
+          path: "/products/:id",
+      element: <Product />,
         },
       ]
     },
