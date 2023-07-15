@@ -3,6 +3,7 @@ import DataTable from "../../components/dataTable/DataTable.tsx";
 import "./users.scss";
 import { userRows } from "../../data.ts";
 import { useState } from "react";
+import Add from "../../components/add/Add.tsx";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
@@ -63,14 +64,7 @@ const Users = () => {
         <button onClick={() => setOpen(true)}>Add New User</button>
       </div>
       <DataTable slug="users" columns={columns} rows={userRows} />
-      {/* TEST THE API */}
-
-      {/* {isLoading ? (
-        "Loading..."
-      ) : (
-        <DataTable slug="users" columns={columns} rows={data} />
-      )} */}
-      {/* {open && <Add slug="user" columns={columns} setOpen={setOpen} />} */}
+      {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };
